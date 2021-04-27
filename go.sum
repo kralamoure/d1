@@ -8,8 +8,8 @@ github.com/go-ozzo/ozzo-validation/v4 v4.3.0 h1:byhDUpfEwjsVQb1vBunvIjh2BHQ9ead5
 github.com/go-ozzo/ozzo-validation/v4 v4.3.0/go.mod h1:2NKgrcHl3z6cJs+3Oo940FPRiTzuqKbvfrL2RxCj6Ew=
 github.com/happybydefault/logger v1.1.0 h1:vbvVUOFhhIA34XaXOEE37oEJ4FNFEA0scXDepZ2L8PA=
 github.com/happybydefault/logger v1.1.0/go.mod h1:4s0e5qUWM8EwYr6CGweOaJQW68DdV4vT4LdHm0W1SAI=
-github.com/kralamoure/d1util v0.0.0-20210325215058-8a2b0858c95c h1:s5K6wG3zbl4dhQfdPBKjLn2rGpaq4XtffNRjARcAhoU=
-github.com/kralamoure/d1util v0.0.0-20210325215058-8a2b0858c95c/go.mod h1:8sc2NJm9BTOGN1uBQ3votGK65ZG0ZSvHd5eGNStzXsU=
+github.com/kralamoure/d1util v0.0.0-20210427234418-7cd5ab0cb6e3 h1:d+Rw+mq+BJCLYXiEWkfcQ3ikCPAzmyJlbH5DgJnVwZA=
+github.com/kralamoure/d1util v0.0.0-20210427234418-7cd5ab0cb6e3/go.mod h1:8sc2NJm9BTOGN1uBQ3votGK65ZG0ZSvHd5eGNStzXsU=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
