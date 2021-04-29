@@ -7,7 +7,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/happybydefault/logger v1.1.0
-	github.com/kralamoure/d1util v0.0.0-20210428002118-57ee743b3615
+	github.com/kralamoure/d1util v0.0.0-20210428040002-6c1bdddc6ce1
 	github.com/stretchr/testify v1.5.1 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
