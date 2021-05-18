@@ -3,7 +3,7 @@ package retrosvc
 import (
 	"errors"
 
-	"github.com/happybydefault/logger"
+	"github.com/happybydefault/logging"
 
 	"github.com/kralamoure/retro"
 )
@@ -11,13 +11,13 @@ import (
 type Config struct {
 	GameServerId int
 	Storer       retro.Storer
-	Logger       logger.Logger
+	Logger       logging.Logger
 }
 
 type Service struct {
 	gameServerId int
 	storer       retro.Storer
-	logger       logger.Logger
+	logging      logging.Logger
 }
 
 func NewService(c Config) (*Service, error) {
@@ -25,12 +25,12 @@ func NewService(c Config) (*Service, error) {
 		return nil, errors.New("nil storer")
 	}
 	if c.Logger == nil {
-		c.Logger = logger.Noop{}
+		c.Logger = logging.Noop{}
 	}
 	svc := &Service{
 		gameServerId: c.GameServerId,
 		storer:       c.Storer,
-		logger:       c.Logger,
+		logging:      c.Logger,
 	}
 	return svc, nil
 }
