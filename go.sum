@@ -6,8 +6,6 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/go-ozzo/ozzo-validation/v4 v4.3.0 h1:byhDUpfEwjsVQb1vBunvIjh2BHQ9ead57VkAEY4V+Es=
 github.com/go-ozzo/ozzo-validation/v4 v4.3.0/go.mod h1:2NKgrcHl3z6cJs+3Oo940FPRiTzuqKbvfrL2RxCj6Ew=
-github.com/happybydefault/logging v0.0.0-20210507180050-0f3842239c0e h1:ixQMSm3+wrtsHiud+6GPnKjaK1FDBHWolG2HZlo4c6s=
-github.com/happybydefault/logging v0.0.0-20210507180050-0f3842239c0e/go.mod h1:RzuxMoS66OSp1ersgjD4fLrij731L4CG2cWYTs06omk=
 github.com/kralamoure/retroutil v0.0.0-20210518132922-a957c67f4004 h1:fLPhJlx0PH9vfjql18c1z5w9wd9x7WUftfhSyEhOSLU=
 github.com/kralamoure/retroutil v0.0.0-20210518132922-a957c67f4004/go.mod h1:eJrJByQELV98su1kI82XiwWNaWrSt2ElKtbm46UEhY4=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
