@@ -14,7 +14,7 @@ func (svc Service) CreateMount(ctx context.Context, mount retro.Mount) (int, err
 		return 0, err
 	}
 
-	return svc.repo.CreateMount(ctx, mount)
+	return svc.storer.CreateMount(ctx, mount)
 }
 
 func (svc Service) UpdateMount(ctx context.Context, mount retro.Mount) error {
@@ -23,21 +23,21 @@ func (svc Service) UpdateMount(ctx context.Context, mount retro.Mount) error {
 		return err
 	}
 
-	return svc.repo.UpdateMount(ctx, mount)
+	return svc.storer.UpdateMount(ctx, mount)
 }
 
 func (svc Service) DeleteMount(ctx context.Context, id int) error {
-	return svc.repo.DeleteMount(ctx, id)
+	return svc.storer.DeleteMount(ctx, id)
 }
 
 func (svc Service) Mount(ctx context.Context, id int) (retro.Mount, error) {
-	return svc.repo.Mount(ctx, id)
+	return svc.storer.Mount(ctx, id)
 }
 
 func (svc Service) Mounts(ctx context.Context) (map[int]retro.Mount, error) {
-	return svc.repo.Mounts(ctx)
+	return svc.storer.Mounts(ctx)
 }
 
 func (svc Service) MountsByCharacterId(ctx context.Context, characterId int) (map[int]retro.Mount, error) {
-	return svc.repo.MountsByCharacterId(ctx, characterId)
+	return svc.storer.MountsByCharacterId(ctx, characterId)
 }

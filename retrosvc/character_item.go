@@ -14,7 +14,7 @@ func (svc Service) CreateCharacterItem(ctx context.Context, item retro.Character
 		return 0, err
 	}
 
-	return svc.repo.CreateCharacterItem(ctx, item)
+	return svc.storer.CreateCharacterItem(ctx, item)
 }
 
 func (svc Service) UpdateCharacterItem(ctx context.Context, item retro.CharacterItem) error {
@@ -23,17 +23,17 @@ func (svc Service) UpdateCharacterItem(ctx context.Context, item retro.Character
 		return err
 	}
 
-	return svc.repo.UpdateCharacterItem(ctx, item)
+	return svc.storer.UpdateCharacterItem(ctx, item)
 }
 
 func (svc Service) DeleteCharacterItem(ctx context.Context, id int) error {
-	return svc.repo.DeleteCharacterItem(ctx, id)
+	return svc.storer.DeleteCharacterItem(ctx, id)
 }
 
 func (svc Service) CharacterItemsByCharacterId(ctx context.Context, characterId int) (map[int]retro.CharacterItem, error) {
-	return svc.repo.CharacterItemsByCharacterId(ctx, characterId)
+	return svc.storer.CharacterItemsByCharacterId(ctx, characterId)
 }
 
 func (svc Service) CharacterItem(ctx context.Context, id int) (retro.CharacterItem, error) {
-	return svc.repo.CharacterItem(ctx, id)
+	return svc.storer.CharacterItem(ctx, id)
 }

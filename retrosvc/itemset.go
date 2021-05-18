@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) ItemSets(ctx context.Context) (map[int]retro.ItemSet, error) {
-	return svc.repo.ItemSets(ctx)
+	return svc.storer.ItemSets(ctx)
 }

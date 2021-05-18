@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) ItemTemplates(ctx context.Context) (map[int]retro.ItemTemplate, error) {
-	return svc.repo.ItemTemplates(ctx)
+	return svc.storer.ItemTemplates(ctx)
 }

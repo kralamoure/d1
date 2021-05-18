@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) NPCTemplates(ctx context.Context) (map[int]retro.NPCTemplate, error) {
-	return svc.repo.NPCTemplates(ctx)
+	return svc.storer.NPCTemplates(ctx)
 }

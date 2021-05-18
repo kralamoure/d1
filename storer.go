@@ -15,7 +15,7 @@ var ErrGameServerHostAndPortAlreadyExist = errors.New("game server host and port
 var ErrCharacterNameAndGameServerIdAlreadyExist = errors.New("character name and game server ID already exist")
 var ErrTicketAccountIdAlreadyExists = errors.New("ticket account ID already exist")
 
-type Repo interface {
+type Storer interface {
 	GameMaps(ctx context.Context) (map[int]GameMap, error)
 	EffectTemplates(ctx context.Context) (map[int]EffectTemplate, error)
 	ItemSets(ctx context.Context) (map[int]ItemSet, error)

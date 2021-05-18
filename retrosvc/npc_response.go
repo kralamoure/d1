@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) NPCResponses(ctx context.Context) (map[int]retro.NPCResponse, error) {
-	return svc.repo.NPCResponses(ctx)
+	return svc.storer.NPCResponses(ctx)
 }

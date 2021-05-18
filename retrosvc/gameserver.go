@@ -15,17 +15,17 @@ func (svc Service) CreateGameServer(ctx context.Context, gameServer retro.GameSe
 		return err
 	}
 
-	return svc.repo.CreateGameServer(ctx, gameServer)
+	return svc.storer.CreateGameServer(ctx, gameServer)
 }
 
 func (svc Service) GameServers(ctx context.Context) (map[int]retro.GameServer, error) {
-	return svc.repo.GameServers(ctx)
+	return svc.storer.GameServers(ctx)
 }
 
 func (svc Service) GameServer(ctx context.Context, id int) (retro.GameServer, error) {
-	return svc.repo.GameServer(ctx, id)
+	return svc.storer.GameServer(ctx, id)
 }
 
 func (svc Service) SetGameServerState(ctx context.Context, state retrotyp.GameServerState) error {
-	return svc.repo.SetGameServerState(ctx, svc.gameServerId, state)
+	return svc.storer.SetGameServerState(ctx, svc.gameServerId, state)
 }

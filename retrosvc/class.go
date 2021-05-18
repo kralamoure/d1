@@ -8,5 +8,5 @@ import (
 )
 
 func (svc Service) Classes(ctx context.Context) (map[retrotyp.ClassId]retro.Class, error) {
-	return svc.repo.Classes(ctx)
+	return svc.storer.Classes(ctx)
 }

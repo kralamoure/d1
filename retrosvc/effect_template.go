@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) EffectTemplates(ctx context.Context) (map[int]retro.EffectTemplate, error) {
-	return svc.repo.EffectTemplates(ctx)
+	return svc.storer.EffectTemplates(ctx)
 }

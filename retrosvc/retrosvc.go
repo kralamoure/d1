@@ -10,26 +10,26 @@ import (
 
 type Config struct {
 	GameServerId int
-	Repo         retro.Repo
+	Storer       retro.Storer
 	Logger       logger.Logger
 }
 
 type Service struct {
 	gameServerId int
-	repo         retro.Repo
+	storer       retro.Storer
 	logger       logger.Logger
 }
 
 func NewService(c Config) (*Service, error) {
-	if c.Repo == nil {
-		return nil, errors.New("nil repository")
+	if c.Storer == nil {
+		return nil, errors.New("nil storer")
 	}
 	if c.Logger == nil {
 		c.Logger = logger.Noop{}
 	}
 	svc := &Service{
 		gameServerId: c.GameServerId,
-		repo:         c.Repo,
+		storer:       c.Storer,
 		logger:       c.Logger,
 	}
 	return svc, nil

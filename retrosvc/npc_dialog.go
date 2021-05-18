@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) NPCDialogs(ctx context.Context) (map[int]retro.NPCDialog, error) {
-	return svc.repo.NPCDialogs(ctx)
+	return svc.storer.NPCDialogs(ctx)
 }

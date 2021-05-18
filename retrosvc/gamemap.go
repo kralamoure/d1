@@ -7,5 +7,5 @@ import (
 )
 
 func (svc Service) GameMaps(ctx context.Context) (map[int]retro.GameMap, error) {
-	return svc.repo.GameMaps(ctx)
+	return svc.storer.GameMaps(ctx)
 }

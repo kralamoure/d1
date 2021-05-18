@@ -14,7 +14,7 @@ func (svc Service) CreateCharacter(ctx context.Context, character retro.Characte
 		return 0, err
 	}
 
-	return svc.repo.CreateCharacter(ctx, character)
+	return svc.storer.CreateCharacter(ctx, character)
 }
 
 func (svc Service) UpdateCharacter(ctx context.Context, character retro.Character) error {
@@ -23,33 +23,33 @@ func (svc Service) UpdateCharacter(ctx context.Context, character retro.Characte
 		return err
 	}
 
-	return svc.repo.UpdateCharacter(ctx, character)
+	return svc.storer.UpdateCharacter(ctx, character)
 }
 
 func (svc Service) DeleteCharacter(ctx context.Context, id int) error {
-	return svc.repo.DeleteCharacter(ctx, id)
+	return svc.storer.DeleteCharacter(ctx, id)
 }
 
 func (svc Service) AllCharacters(ctx context.Context) (map[int]retro.Character, error) {
-	return svc.repo.AllCharacters(ctx)
+	return svc.storer.AllCharacters(ctx)
 }
 
 func (svc Service) AllCharactersByAccountId(ctx context.Context, accountId string) (map[int]retro.Character, error) {
-	return svc.repo.AllCharactersByAccountId(ctx, accountId)
+	return svc.storer.AllCharactersByAccountId(ctx, accountId)
 }
 
 func (svc Service) Characters(ctx context.Context) (map[int]retro.Character, error) {
-	return svc.repo.Characters(ctx, svc.gameServerId)
+	return svc.storer.Characters(ctx, svc.gameServerId)
 }
 
 func (svc Service) CharactersByAccountId(ctx context.Context, accountId string) (map[int]retro.Character, error) {
-	return svc.repo.CharactersByAccountId(ctx, svc.gameServerId, accountId)
+	return svc.storer.CharactersByAccountId(ctx, svc.gameServerId, accountId)
 }
 
 func (svc Service) CharactersByGameMapId(ctx context.Context, gameMapId int) (map[int]retro.Character, error) {
-	return svc.repo.CharactersByGameMapId(ctx, svc.gameServerId, gameMapId)
+	return svc.storer.CharactersByGameMapId(ctx, svc.gameServerId, gameMapId)
 }
 
 func (svc Service) Character(ctx context.Context, id int) (retro.Character, error) {
-	return svc.repo.Character(ctx, id)
+	return svc.storer.Character(ctx, id)
 }
