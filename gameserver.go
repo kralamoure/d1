@@ -1,17 +1,17 @@
-package d1
+package retro
 
 import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 type GameServer struct {
 	Id         int
 	Host       string
 	Port       string
-	State      d1typ.GameServerState
+	State      retrotyp.GameServerState
 	Completion int
 }
 

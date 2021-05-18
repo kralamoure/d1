@@ -1,6 +1,6 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 var MountTemplateIdByMountCertificateId = map[int]int{
 	7808: 3,
@@ -148,14 +148,14 @@ type MountTemplate struct {
 	Id         int
 	Name       string
 	GFXId      int
-	Color1     d1typ.Color
-	Color2     d1typ.Color
-	Color3     d1typ.Color
-	MaxEffects []d1typ.Effect
+	Color1     retrotyp.Color
+	Color2     retrotyp.Color
+	Color3     retrotyp.Color
+	MaxEffects []retrotyp.Effect
 }
 
-func (t MountTemplate) Effects(level int) []d1typ.Effect {
-	var effects []d1typ.Effect
+func (t MountTemplate) Effects(level int) []retrotyp.Effect {
+	var effects []retrotyp.Effect
 
 	for _, effect := range t.MaxEffects {
 		effect.DiceNum = effect.DiceNum * level / 100

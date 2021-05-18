@@ -1,9 +1,9 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type NPCTemplate struct {
 	Id      int
 	Name    string
-	Actions []d1typ.NPCAction
+	Actions []retrotyp.NPCAction
 }

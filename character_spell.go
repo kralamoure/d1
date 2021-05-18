@@ -1,4 +1,4 @@
-package d1
+package retro
 
 type CharacterSpell struct {
 	Id       int

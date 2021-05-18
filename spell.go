@@ -1,10 +1,10 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type Spell struct {
 	Id          int
 	Name        string
 	Description string
-	Levels      []d1typ.SpellLevel
+	Levels      []retrotyp.SpellLevel
 }

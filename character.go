@@ -1,11 +1,11 @@
-package d1
+package retro
 
 import (
 	"math"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 var CharacterXPFloors = []int{110, 650, 1_500, 2_800, 4_800, 7_300, 10_500, 14_500, 19_200, 25_200, 32_600, 41_000,
@@ -39,13 +39,13 @@ type Character struct {
 	Id               int
 	AccountId        string
 	GameServerId     int
-	Name             d1typ.CharacterName
-	Sex              d1typ.Sex
-	ClassId          d1typ.ClassId
-	Color1           d1typ.Color
-	Color2           d1typ.Color
-	Color3           d1typ.Color
-	Alignment        d1typ.Alignment
+	Name             retrotyp.CharacterName
+	Sex              retrotyp.Sex
+	ClassId          retrotyp.ClassId
+	Color1           retrotyp.Color
+	Color2           retrotyp.Color
+	Color3           retrotyp.Color
+	Alignment        retrotyp.Alignment
 	AlignmentEnabled bool
 	XP               int
 	Kamas            int
@@ -103,9 +103,9 @@ func (c Character) Level() int {
 	return level
 }
 
-func (c Character) Grade() d1typ.AlignmentGrade {
-	if c.Alignment == d1typ.AlignmentNeutral {
-		return d1typ.AlignmentGradeNeutral
+func (c Character) Grade() retrotyp.AlignmentGrade {
+	if c.Alignment == retrotyp.AlignmentNeutral {
+		return retrotyp.AlignmentGradeNeutral
 	}
 	grade := 1
 	for _, v := range CharacterHonorFloors {
@@ -113,7 +113,7 @@ func (c Character) Grade() d1typ.AlignmentGrade {
 			grade++
 		}
 	}
-	return d1typ.AlignmentGrade(grade)
+	return retrotyp.AlignmentGrade(grade)
 }
 
 func (c Character) XPLow() int {

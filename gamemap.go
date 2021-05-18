@@ -1,6 +1,6 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1util"
+import "github.com/kralamoure/retroutil"
 
 type GameMap struct {
 	Id            int
@@ -22,17 +22,17 @@ type GameMapPath struct {
 	Dir    int
 }
 
-func (m GameMap) Cells() ([]d1util.Cell, error) {
-	utilCells, err := d1util.DecompressCells(m.Data, false)
+func (m GameMap) Cells() ([]retroutil.Cell, error) {
+	utilCells, err := retroutil.DecompressCells(m.Data, false)
 	if err != nil {
 		return nil, err
 	}
 
-	builtCells := d1util.BuiltCells(nil, false, m.Width, utilCells)
+	builtCells := retroutil.BuiltCells(nil, false, m.Width, utilCells)
 
-	cells := make([]d1util.Cell, len(builtCells))
+	cells := make([]retroutil.Cell, len(builtCells))
 	for i, v := range builtCells {
-		cells[i] = d1util.Cell{
+		cells[i] = retroutil.Cell{
 			Id:                             v.Id,
 			Active:                         v.Active,
 			LineOfSight:                    v.LineOfSight,

@@ -1,12 +1,12 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type EffectTemplate struct {
 	Id               int
 	Description      string
 	Dice             bool
-	Operator         d1typ.EffectOperator
-	CharacteristicId d1typ.CharacteristicId
-	Element          d1typ.EffectElement
+	Operator         retrotyp.EffectOperator
+	CharacteristicId retrotyp.CharacteristicId
+	Element          retrotyp.EffectElement
 }

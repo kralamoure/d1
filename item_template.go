@@ -1,16 +1,16 @@
-package d1
+package retro
 
 import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 type ItemTemplate struct {
 	Id            int
 	Name          string
 	Description   string
-	Type          d1typ.ItemType
+	Type          retrotyp.ItemType
 	Enhanceable   bool
 	TwoHands      bool
 	Ethereal      bool
@@ -24,7 +24,7 @@ type ItemTemplate struct {
 	Weight        int
 	Cursed        bool
 	Conditions    string // TODO
-	Effects       []d1typ.Effect
+	Effects       []retrotyp.Effect
 	WeaponEffects WeaponEffects
 }
 

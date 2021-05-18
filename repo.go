@@ -1,11 +1,11 @@
-package d1
+package retro
 
 import (
 	"context"
 	"errors"
 	"time"
 
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 var ErrNotFound = errors.New("not found")
@@ -23,7 +23,7 @@ type Repo interface {
 	NPCTemplates(ctx context.Context) (map[int]NPCTemplate, error)
 	NPCDialogs(ctx context.Context) (map[int]NPCDialog, error)
 	NPCResponses(ctx context.Context) (map[int]NPCResponse, error)
-	Classes(ctx context.Context) (map[d1typ.ClassId]Class, error)
+	Classes(ctx context.Context) (map[retrotyp.ClassId]Class, error)
 	Spells(ctx context.Context) (map[int]Spell, error)
 	MountTemplates(ctx context.Context) (map[int]MountTemplate, error)
 
@@ -33,7 +33,7 @@ type Repo interface {
 	CreateGameServer(ctx context.Context, gameServer GameServer) error
 	GameServers(ctx context.Context) (map[int]GameServer, error)
 	GameServer(ctx context.Context, id int) (GameServer, error)
-	SetGameServerState(ctx context.Context, id int, state d1typ.GameServerState) error
+	SetGameServerState(ctx context.Context, id int, state retrotyp.GameServerState) error
 
 	CreateTicket(ctx context.Context, ticket Ticket) (string, error)
 	DeleteTickets(ctx context.Context, before time.Time) (int, error)

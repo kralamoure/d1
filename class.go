@@ -1,9 +1,9 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type Class struct {
-	Id               d1typ.ClassId
+	Id               retrotyp.ClassId
 	Name             string
 	Label            string
 	ShortDescription string

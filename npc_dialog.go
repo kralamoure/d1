@@ -1,4 +1,4 @@
-package d1
+package retro
 
 type NPCDialog struct {
 	Id        int

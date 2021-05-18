@@ -1,9 +1,9 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type CharacterItem struct {
 	Item
-	Position    d1typ.CharacterItemPosition
+	Position    retrotyp.CharacterItemPosition
 	CharacterId int
 }

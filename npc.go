@@ -1,6 +1,6 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type NPC struct {
 	Id            string
@@ -9,13 +9,13 @@ type NPC struct {
 	CellId        int
 	Direction     int
 	TemplateId    int
-	Sex           d1typ.Sex
+	Sex           retrotyp.Sex
 	GFX           int
 	ScaleX        int
 	ScaleY        int
-	Color1        d1typ.Color
-	Color2        d1typ.Color
-	Color3        d1typ.Color
+	Color1        retrotyp.Color
+	Color2        retrotyp.Color
+	Color3        retrotyp.Color
 	Accessories   string // TODO
 	ExtraClip     int    // -1 for no extra clip.
 	CustomArtwork int

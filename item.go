@@ -1,20 +1,20 @@
-package d1
+package retro
 
 import (
 	"time"
 
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 type Item struct {
 	Id         int
 	TemplateId int
 	Quantity   int
-	Effects    []d1typ.Effect
+	Effects    []retrotyp.Effect
 }
 
-func (item Item) DisplayEffects() []d1typ.Effect {
-	effects := make([]d1typ.Effect, len(item.Effects))
+func (item Item) DisplayEffects() []retrotyp.Effect {
+	effects := make([]retrotyp.Effect, len(item.Effects))
 	copy(effects, item.Effects)
 
 	for _, v := range effects {
@@ -28,14 +28,14 @@ func (item Item) DisplayEffects() []d1typ.Effect {
 				hours := int(dur.Hours()) % 24
 				minutes := int(dur.Minutes()) % 60
 
-				effects = append(effects, d1typ.Effect{
+				effects = append(effects, retrotyp.Effect{
 					Id:       998,
 					DiceNum:  days,
 					DiceSide: hours,
 					Value:    minutes,
 				})
 			} else {
-				effects = append(effects, d1typ.Effect{
+				effects = append(effects, retrotyp.Effect{
 					Id: 994,
 				})
 			}

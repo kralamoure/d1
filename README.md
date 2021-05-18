@@ -1,6 +1,6 @@
-# d1
+# retro
 
-`d1` is a core library for Dofus 1.
+`retro` is a core library for Dofus Retro.
 
 ## Requirements
 
@@ -10,5 +10,5 @@
 ## Installation
 
 ```sh
-go get -u -v github.com/kralamoure/d1
+go get -u -v github.com/kralamoure/retro
 ```

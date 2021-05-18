@@ -1,11 +1,11 @@
-package d1
+package retro
 
-import "github.com/kralamoure/d1/d1typ"
+import "github.com/kralamoure/retro/retrotyp"
 
 type NPCResponse struct {
 	Id         int
 	Text       string
-	Action     d1typ.NPCResponseAction
+	Action     retrotyp.NPCResponseAction
 	Arguments  []string
 	Conditions []string // TODO
 }

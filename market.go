@@ -1,7 +1,7 @@
-package d1
+package retro
 
 import (
-	"github.com/kralamoure/d1/d1typ"
+	"github.com/kralamoure/retro/retrotyp"
 )
 
 type Market struct {
@@ -10,7 +10,7 @@ type Market struct {
 	Quantity1     int
 	Quantity2     int
 	Quantity3     int
-	Types         []d1typ.ItemType
+	Types         []retrotyp.ItemType
 	Fee           float32
 	MaxLevel      int
 	MaxPerAccount int
